@@ -94,10 +94,6 @@
                 NSString *comment = [weakSelf nextComment];
                 if(comment)
                 {
-//                    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.15 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//
-//                    });
-                    
                     [weakSelf createBulletView:comment trajectory:trajectory];
                 }
                 break;
@@ -110,7 +106,7 @@
                 }
                 
                 // 是否开始循环
-                if(self.bulletComments.count == 0) { // 说明没有屏幕上已经没有的弹幕了，开始循环滚动
+                if(self.bulletViews.count == 0) { // 说明没有屏幕上已经没有的弹幕了，开始循环滚动
                     self.bStopAnimation = YES;
                     [weakSelf startBulletsAction];
                 }

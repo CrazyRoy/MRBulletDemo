@@ -32,14 +32,14 @@
     UIButton *startBtn = [[UIButton alloc] init];
     [startBtn setTitle:@"start" forState:UIControlStateNormal];
     [startBtn setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
-    startBtn.frame = CGRectMake(100, 100, 100, 40);
+    startBtn.frame = CGRectMake(50, 100, 80, 40);
     [startBtn addTarget:self action:@selector(clickStartBtn) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:startBtn];
     
     UIButton *stopBtn = [[UIButton alloc] init];
     [stopBtn setTitle:@"stop" forState:UIControlStateNormal];
     [stopBtn setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
-    stopBtn.frame = CGRectMake(150, 100, 100, 40);
+    stopBtn.frame = CGRectMake([UIScreen mainScreen].bounds.size.width-130, 100, 80, 40);
     [stopBtn addTarget:self action:@selector(clickStopBtn) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:stopBtn];
 }
